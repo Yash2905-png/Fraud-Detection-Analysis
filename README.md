@@ -1,36 +1,61 @@
-# Fraud Detection Analytics
+# 🛡️ Fraud Detection Analytics
 
-A data analytics project that uses unsupervised machine learning
-(Isolation Forest) to detect anomalous, potentially fraudulent
-transactions in transaction data.
+## CodTech IT Solutions — Data Analytics Internship | Task 4
 
-## 📌 Project Overview
+---
 
-This project simulates a realistic transaction dataset (with a ~4% fraud
-rate, similar to real-world card fraud datasets) and applies an Isolation
-Forest model to flag anomalies based on:
-- Transaction amount
-- Distance from cardholder's home
-- Number of transactions in the last 24 hours
-- Time of day
+| **Field** | **Details** |
+|-----------|-------------|
+| **Intern Name** | Yash Gamare |
+| **Intern ID** | CITS4255 |
+| **Domain** | Data Science & Analytics |
+| **Project** | Fraud Detection Analytics |
+| **Level** | Advanced |
 
-It then evaluates how well the unsupervised model's predictions align
-with the actual fraud labels.
+---
 
-## 🛠️ Tech Stack
-- Python 3.8+
-- pandas — data manipulation
-- scikit-learn — Isolation Forest model, scaling, evaluation metrics
-- matplotlib — visualization
+## 📖 Project Overview
+
+This project focuses on detecting potentially fraudulent financial transactions using **Unsupervised Machine Learning**. It utilizes the **Isolation Forest** algorithm to identify anomalies in transaction data without requiring labeled data during training.
+
+The project simulates a realistic transaction dataset with approximately **4% fraudulent transactions**, analyzes suspicious patterns, and evaluates how effectively the anomaly detection model identifies fraud.
+
+---
+
+## 🎯 Objectives
+
+- Detect fraudulent transactions using Isolation Forest.
+- Analyze transaction patterns and fraud indicators.
+- Compare predicted anomalies with actual fraud labels.
+- Visualize fraud trends and anomaly scores.
+- Evaluate model performance using classification metrics.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Git & GitHub
+
+---
 
 ## 📂 Project Structure
-```
-fraud-detection-analytics/
-├── generate_data.py     # Creates the synthetic transaction dataset
-├── analyze.py             # Main analysis, model training & evaluation
+
+```text
+Fraud-Detection-Analytics/
+│
+├── generate_data.py
+├── analyze.py
 ├── requirements.txt
+├── README.md
+│
 ├── data/
-│   └── transactions.csv   (generated)
+│   └── transactions.csv
+│
 └── output/
     ├── confusion_matrix.png
     ├── amount_distribution.png
@@ -39,50 +64,97 @@ fraud-detection-analytics/
     └── transactions_with_predictions.csv
 ```
 
-## 🚀 How to Run
+---
+
+## 🚀 Installation
 
 ```bash
-# 1. Clone the repo
-git clone <your-repo-url>
-cd fraud-detection-analytics
+git clone https://github.com/YOUR_USERNAME/Fraud-Detection-Analytics.git
 
-# 2. Install dependencies
+cd Fraud-Detection-Analytics
+
 pip install -r requirements.txt
 
-# 3. Generate the dataset
 python generate_data.py
 
-# 4. Run the analysis
 python analyze.py
 ```
 
+---
+
+## 📊 Features
+
+- 💳 Fraud Detection using Isolation Forest
+- 📈 Transaction Pattern Analysis
+- 📊 Confusion Matrix Visualization
+- ⏰ Fraud Analysis by Time of Day
+- 💰 Transaction Amount Distribution
+- 🔥 Anomaly Score Visualization
+- 📂 Synthetic Dataset Generation
+
+---
+
 ## 🧠 Methodology
 
-1. **Data generation**: synthetic transactions are created with realistic
-   fraud signals — larger amounts, odd hours (late night/early morning),
-   greater distance from home, and higher transaction frequency.
-2. **Feature scaling**: numeric features are standardized with `StandardScaler`.
-3. **Model**: an `IsolationForest` is trained in an unsupervised manner
-   (it never sees the `is_fraud` label during training) to isolate anomalies.
-4. **Evaluation**: predictions are compared against the true labels using
-   a classification report and confusion matrix to measure how well
-   anomaly detection approximates actual fraud detection.
+1. Generate a realistic synthetic transaction dataset.
+2. Clean and preprocess transaction data.
+3. Standardize numerical features using `StandardScaler`.
+4. Train the **Isolation Forest** model for anomaly detection.
+5. Predict fraudulent transactions.
+6. Compare predictions with actual labels.
+7. Visualize results and evaluate model performance.
+
+---
+
+## 📈 Output
+
+The project generates the following visualizations:
+
+- 📌 Confusion Matrix
+- 📌 Transaction Amount Distribution
+- 📌 Fraud by Hour Analysis
+- 📌 Anomaly Score Scatter Plot
+- 📌 Transactions with Predicted Fraud Labels
+
+All generated files are automatically saved inside the **output/** folder.
+
+---
 
 ## 📊 Sample Insights
-- Fraud rate broken down by merchant category
-- Average transaction amount: fraud vs legitimate
-- Confusion matrix showing detection accuracy
-- Distribution of fraud cases by hour of day
-- Anomaly score scatter plot showing model confidence
 
-## 🔮 Possible Extensions
-- Compare against a supervised model (Logistic Regression, Random Forest, XGBoost)
-- Add more behavioral features (spending velocity, device fingerprint, merchant risk score)
-- Build a real-time scoring API with FastAPI
-- Apply SMOTE or other techniques to handle class imbalance for supervised models
+- Fraud vs Legitimate Transaction Comparison
+- Average Transaction Amount Analysis
+- Fraud Distribution Across Different Hours
+- Anomaly Detection Performance
+- Model Evaluation using Classification Metrics
 
-## 👤 Author
-Built as part of a CodTech IT Solutions internship task.
+---
+
+## 🔮 Future Enhancements
+
+- 🤖 Compare with Supervised Machine Learning Models
+- 📊 Random Forest & XGBoost Implementation
+- 🌐 Real-Time Fraud Detection API using FastAPI
+- 📈 Interactive Streamlit Dashboard
+- 🧠 Behavioral Pattern Analysis
+- 📱 Live Transaction Monitoring Dashboard
+
+---
+
+## 👨‍💻 Author
+
+**Yash Gamare**
+
+Computer Engineering Graduate
+
+GitHub: https://github.com/Yash2905-png
+
+---
 
 ## 📄 License
-This project is open source under the MIT License.
+
+This project is licensed under the **MIT License**.
+
+---
+
+⭐ If you found this project useful, consider giving it a **Star ⭐** on GitHub!
